@@ -1,0 +1,12 @@
+fleetman-position-simulator:
+  image: supinfo4kube/position-simulator:1.0.1
+  depends_on:
+    - fleetman-queue
+  environment:
+    - SPRING_PROFILES_ACTIVE=production-microservice
+  networks:
+    - fleetman
+
+networks: fleetman
+
+volumes: mongo-data

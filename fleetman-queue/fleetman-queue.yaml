@@ -1,0 +1,11 @@
+fleetman-queue:
+  image: supinfo4kube/queue:1.0.1
+  ports:
+    - 8161:8161
+    - 61616:61616
+  networks:
+    - fleetman
+
+networks: fleetman
+
+volumes: mongo-data

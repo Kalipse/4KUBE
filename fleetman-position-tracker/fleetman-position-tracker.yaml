@@ -1,0 +1,14 @@
+ fleetman-position-tracker:
+    image: supinfo4kube/position-tracker:1.0.1
+    ports:
+      - 30010:8080
+    environment:
+      - SPRING_PROFILES_ACTIVE=production-microservice
+    networks:
+      - fleetman
+
+networks:
+  fleetman
+
+volumes:
+  mongo-data

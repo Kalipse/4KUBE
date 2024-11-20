@@ -1,0 +1,12 @@
+fleetman-webapp:
+  image: supinfo4kube/web-app:1.0.0
+  ports:
+    - 30080:80
+  depends_on:
+    - fleetman-api-gateway
+  networks:
+    - fleetman
+
+networks: fleetman
+
+volumes: mongo-data
