@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fleetman-position-tracker
+  labels:
+    app: fleetman-position-tracker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fleetman-position-tracker
+  template:
+    metadata:
+      labels:
+        app: fleetman-position-tracker
+    spec:
+      containers:
+        - name: position-tracker
+          image: supinfo4kube/position-tracker:1.0.1
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "production-microservice"
+            - name: MONGO_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-secret
+                  key: mongo-root-username
+            - name: MONGO_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-secret
+                  key: mongo-root-password

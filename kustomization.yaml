@@ -1,0 +1,16 @@
+resources:
+  - fleetman-api-gateway/fleetman-api-gateway-deployment.yaml
+  - fleetman-api-gateway/fleetman-api-gateway-service.yaml
+  - fleetman-mongodb/mongodb-deployment.yaml
+  - fleetman-mongodb/mongodb-secret.yaml
+  - fleetman-mongodb/mongodb-service.yaml
+  - fleetman-mongodb/mongodb-pv.yaml
+  - fleetman-mongodb/mongodb-pvc.yaml
+  - fleetman-position-simulator/fleetman-position-simulator-deployment.yaml
+  - fleetman-position-simulator/fleetman-position-simulator-service.yaml
+  - fleetman-position-tracker/fleetman-position-tracker-deployment.yaml
+  - fleetman-position-tracker/fleetman-position-tracker-service.yaml
+  - fleetman-queue/fleetman-queue-deployment.yaml
+  - fleetman-queue/fleetman-queue-service.yaml
+  - fleetman-webapp/fleetman-web-app-deployment.yaml
+  - fleetman-webapp/fleetman-web-app-service.yaml
