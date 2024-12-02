@@ -27,15 +27,3 @@ spec:
             limits:
               memory: "2Gi"
               cpu: "1"
-          livenessProbe:
-            exec:
-              command:
-                - sh
-                - -c
-                - |
-                  mongo --host fleetman-mongodb --port 27017 --eval "db.runCommand('ping')" || exit 1
-            initialDelaySeconds: 30
-            periodSeconds: 10
-            timeoutSeconds: 5
-            failureThreshold: 3
-            successThreshold: 1
