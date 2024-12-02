@@ -2,7 +2,6 @@ resources:
   - fleetman-api-gateway/fleetman-api-gateway-deployment.yaml
   - fleetman-api-gateway/fleetman-api-gateway-service.yaml
   - fleetman-mongodb/mongodb-deployment.yaml
-  - fleetman-mongodb/mongodb-secret.yaml
   - fleetman-mongodb/mongodb-service.yaml
   - fleetman-mongodb/mongodb-pv.yaml
   - fleetman-mongodb/mongodb-pvc.yaml
